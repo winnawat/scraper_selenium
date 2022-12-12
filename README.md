@@ -13,6 +13,20 @@ Finer adjustments can be made by modifying `fb_scraper_config.ini`
 # Logging In
 Logging into Facebook should not be required. Nonetheless, to login, provide the credentials in `facebook_credentials.txt` and change `user_login` field in `fb_scraper_config.ini` to "True".
 
+# Config Key and Values
+```
+[DEFAULT]
+max_post_count: currently set at 200. When all goes smoothly, change this to ~20,000 and see if Chrome crashes. If doesn't go for even more posts.
+
+[COMPONENT_NAMES]
+these are types and names of the web page componenents. To update, inspect the FB page and change the name accordingly.
+
+[CUSTOM_RULES]
+not_headlines: used to remove posts with these values as headlines which are actually not news article.
+sponsored_by: used to count sponsored posts. Posts with these phrases as a part of their text will be flagged as sponsored. Anything that follows these phrases will be put under sponsor_name.
+```
+
+
 # Website Elements
 Under the you will see something like
 ```

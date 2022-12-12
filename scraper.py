@@ -41,6 +41,7 @@ def main():
     webdriver_path = config['DEFAULT']['webdriver_path']
     target_website = config['DEFAULT']['target_website']
     target_subpage = config['DEFAULT']['target_subpage']
+    
     post_class_type = config['COMPONENT_NAMES']['post_class_type']
     post_class_name = config['COMPONENT_NAMES']['post_class_name']
     link_class_type = config['COMPONENT_NAMES']['link_class_type']
@@ -53,9 +54,10 @@ def main():
     comment_share_class_name = config['COMPONENT_NAMES']['comment_share_class_name']
     headline_class_type = config['COMPONENT_NAMES']['headline_class_type']
     headline_class_name = config['COMPONENT_NAMES']['headline_class_name']
-    not_headlines = config['COMPONENT_NAMES']['not_headlines'].split(',')
+
+    not_headlines = config['CUSTOM_RULES']['not_headlines'].split(',')
     not_headlines = [txt.strip() for txt in not_headlines]
-    sponsored_by = config['COMPONENT_NAMES']['sponsored_by'].split(',')
+    sponsored_by = config['CUSTOM_RULES']['sponsored_by'].split(',')
     sponsored_by = [txt.strip() for txt in sponsored_by]
 
     if user_login == 'True':
